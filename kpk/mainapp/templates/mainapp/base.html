@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    {% block css %}
+    {% endblock %}
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+        }
+
+        li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #555;
+          color: white;
+        }
+
+    </style>
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+<div class="main-menu">
+    <ul>
+        <li>
+            <a href="/">Главная</a>
+        </li>
+        <li>
+            <a href="/catalog/">Каталог</a>
+        </li>
+        <li>
+            <a href="/basket/">Корзина</a>
+        </li>
+    </ul>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
